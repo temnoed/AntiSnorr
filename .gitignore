@@ -1,0 +1,20 @@
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+app/build/
+*.apk
+*.aab
+*.keystore
+!debug.keystore
+
+# Personal data: night logs and analysis artifacts stay out of the public repo
+AntiSnorr night log.txt
+audio_log_alignment.png
+antisnorr_night.log

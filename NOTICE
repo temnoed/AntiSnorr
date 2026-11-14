@@ -1,0 +1,21 @@
+AntiSnorr
+Copyright (c) 2026 AntiSnorr contributors
+
+This product includes third-party assets:
+
+1. YAMNet audio classification model
+   File: app/src/main/assets/yamnet.tflite
+   Source: Google, YAMNet (AudioSet), distributed via Kaggle
+           https://www.kaggle.com/models/google/yamnet
+   License: Apache License 2.0
+   https://www.apache.org/licenses/LICENSE-2.0
+
+2. AudioSet class map
+   File: app/src/main/assets/yamnet_class_map.csv
+   Source: https://github.com/tensorflow/models/tree/master/research/audioset/yamnet
+   License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+   https://creativecommons.org/licenses/by/4.0/
+
+Gadgetbridge is a separate application and is not bundled with AntiSnorr.
+AntiSnorr only sends Android broadcasts that Gadgetbridge may consume.
+Gadgetbridge is licensed under the GNU Affero General Public License v3.0.

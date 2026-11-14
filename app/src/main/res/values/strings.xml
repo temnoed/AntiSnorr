@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">AntiSnorr</string>
+    <string name="app_subtitle">Snore detector + Gadgetbridge vibration</string>
+
+    <string name="status_idle">Idle</string>
+    <string name="status_listening">Listening to the microphone</string>
+    <string name="status_snore">Snoring detected</string>
+    <string name="status_error">Error</string>
+
+    <string name="btn_start">Start monitoring</string>
+    <string name="btn_stop">Stop monitoring</string>
+    <string name="btn_test_vibration">Test vibration</string>
+    <string name="btn_open_gadgetbridge">Open Gadgetbridge</string>
+    <string name="btn_battery_settings">Allow background work</string>
+    <string name="btn_export_log">Export night log</string>
+    <string name="btn_clear_log">Clear log</string>
+
+    <string name="label_snore_probability">Snore probability</string>
+    <string name="label_top_class">Top class</string>
+    <string name="label_rms">Level</string>
+    <string name="label_no_signal">—</string>
+
+    <string name="section_live">Live analysis</string>
+    <string name="section_settings">Detection settings</string>
+    <string name="section_setup">Setup checklist</string>
+    <string name="section_events">Tonight\'s events</string>
+
+    <string name="setting_threshold">Trigger threshold</string>
+    <string name="setting_threshold_hint">Higher value = fewer false triggers. Start at 0.35.</string>
+    <string name="setting_mic_sensitivity">Microphone sensitivity</string>
+    <string name="setting_mic_sensitivity_hint">Frames below the gate are skipped. Lower the value if snoring is quiet.</string>
+    <string name="setting_gain">Microphone gain</string>
+    <string name="setting_confirm_hits">Consecutive hits to trigger</string>
+    <string name="setting_confirm_hits_hint">1 = instant, 2-4 = fewer false triggers. Default 1.</string>
+    <string name="setting_repeat">Repeat while snoring</string>
+    <string name="setting_repeat_value">%1$d s</string>
+    <string name="setting_pattern_summary">Fade-out rhythm: %1$d s — 3 series × 4 pulses of 1 s, gaps grow 1→3 s, 1 s between series. Then silence until the next repeat.</string>
+    <string name="setting_mode">Vibration channel</string>
+
+    <string name="mode_notification">Notification</string>
+    <string name="mode_gb_notification">GB intent</string>
+    <string name="mode_gb_call">GB fake call</string>
+
+    <string name="mode_hint_notification">AntiSnorr posts a local notification and Gadgetbridge forwards it to the band. No extra Gadgetbridge settings are required besides notification access.</string>
+    <string name="mode_hint_gb_notification">Sends a DEBUG_SEND_NOTIFICATION broadcast. In Gadgetbridge enable Settings → Developer settings → Intent API → Debug → Allow debug commands.</string>
+    <string name="mode_hint_gb_call">Simulates an incoming call for a few seconds. Usually the strongest vibration. Requires the same \"Allow debug commands\" setting. Used for the fade-out rhythm (1 s pulses).</string>
+
+    <string name="setup_step_1">1. Install Gadgetbridge, pair the band and make sure it stays connected.</string>
+    <string name="setup_step_2">2. In Gadgetbridge enable \"Allow debug commands\" (Settings → Developer settings → Intent API → Debug). Notification access is only needed for the Notification mode.</string>
+    <string name="setup_step_3">3. In Gadgetbridge open the band settings and enable notifications/vibration for AntiSnorr.</string>
+    <string name="setup_step_4">4. Grant microphone and notification permissions to AntiSnorr and start monitoring.</string>
+    <string name="setup_step_5">5. Disable battery optimisation for AntiSnorr so Android does not kill the foreground service at night.</string>
+
+    <string name="events_empty">No episodes recorded yet.</string>
+    <string name="events_summary">Episodes: %1$d</string>
+    <string name="event_format">%1$s · %2$d s · peak %3$d%%</string>
+
+    <string name="error_no_mic">Microphone permission is not granted.</string>
+    <string name="error_audio_init">Could not open the microphone. Close other recording apps and try again.</string>
+    <string name="error_model">Could not load the YAMNet model. Reinstall the app.</string>
+    <string name="error_gb_missing">Gadgetbridge is not installed — falling back to a local notification.</string>
+
+    <string name="footer_privacy">All audio is processed on the device. Nothing is recorded or uploaded.</string>
+
+    <string name="notification_channel_monitor">Monitoring</string>
+    <string name="notification_channel_alert">Snore alerts</string>
+    <string name="notification_monitor_title">AntiSnorr is listening</string>
+    <string name="notification_monitor_text">Snore detection is running in the background.</string>
+    <string name="notification_stop">Stop</string>
+    <string name="alert_title">Snoring detected</string>
+    <string name="alert_text">Peak probability %1$d%% — time to change position.</string>
+    <string name="alert_test_title">AntiSnorr test</string>
+    <string name="alert_test_text">If the band vibrates, the setup works.</string>
+</resources>

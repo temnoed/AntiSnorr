@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">AntiSnorr</string>
+    <string name="app_subtitle">Детектор храпа + вибрация через Gadgetbridge</string>
+
+    <string name="status_idle">Остановлено</string>
+    <string name="status_listening">Слушаю микрофон</string>
+    <string name="status_snore">Обнаружен храп</string>
+    <string name="status_error">Ошибка</string>
+
+    <string name="btn_start">Начать мониторинг</string>
+    <string name="btn_stop">Остановить</string>
+    <string name="btn_test_vibration">Тест вибрации</string>
+    <string name="btn_open_gadgetbridge">Открыть Gadgetbridge</string>
+    <string name="btn_battery_settings">Разрешить работу в фоне</string>
+    <string name="btn_export_log">Экспорт лога за ночь</string>
+    <string name="btn_clear_log">Очистить лог</string>
+
+    <string name="label_snore_probability">Вероятность храпа</string>
+    <string name="label_top_class">Топ-класс</string>
+    <string name="label_rms">Уровень</string>
+    <string name="label_no_signal">—</string>
+
+    <string name="section_live">Живой анализ</string>
+    <string name="section_settings">Настройки детекции</string>
+    <string name="section_setup">Чек-лист настройки</string>
+    <string name="section_events">События за ночь</string>
+
+    <string name="setting_threshold">Порог срабатывания</string>
+    <string name="setting_threshold_hint">Чем выше значение, тем меньше ложных срабатываний. Начните с 0.35.</string>
+    <string name="setting_repeat">Повтор, пока храп продолжается</string>
+    <string name="setting_repeat_value">%1$d с</string>
+    <string name="setting_pattern_summary">Ритм затухания: %1$d с — 3 серии × 4 импульса по 1 с, паузы между ними растут 1→3 с, между сериями 1 с. Затем тишина до следующего повтора.</string>
+    <string name="setting_mode">Канал вибрации</string>
+
+    <string name="mode_notification">Уведомление</string>
+    <string name="mode_gb_notification">GB intent</string>
+    <string name="mode_gb_call">Фейк-звонок</string>
+
+    <string name="mode_hint_notification">AntiSnorr показывает локальное уведомление, Gadgetbridge пересылает его на браслет. Кроме доступа к уведомлениям в Gadgetbridge ничего настраивать не нужно.</string>
+    <string name="mode_hint_gb_notification">Отправляет broadcast DEBUG_SEND_NOTIFICATION. В Gadgetbridge включите: Настройки → Для разработчиков → Intent API (в русском переводе — «Интернет API») → Отладка → Разрешить отладочные команды.</string>
+    <string name="mode_hint_gb_call">Имитирует входящий звонок на несколько секунд. Обычно самая сильная вибрация. Требует той же настройки «Разрешить отладочные команды». Используется для ритма затухания (импульсы по 1 с).</string>
+
+    <string name="setup_step_1">1. Установите Gadgetbridge, спарьте браслет и убедитесь, что он остаётся подключённым.</string>
+    <string name="setup_step_2">2. В Gadgetbridge включите «Разрешить отладочные команды» (Настройки → Для разработчиков → Intent API → Отладка). Доступ к уведомлениям нужен только для режима «Уведомление».</string>
+    <string name="setup_step_3">3. В настройках браслета в Gadgetbridge включите уведомления и вибрацию для AntiSnorr.</string>
+    <string name="setup_step_4">4. Выдайте AntiSnorr разрешения на микрофон и уведомления и запустите мониторинг.</string>
+    <string name="setup_step_5">5. Отключите оптимизацию батареи для AntiSnorr, чтобы Android не убил foreground-сервис ночью.</string>
+
+    <string name="events_empty">Эпизодов пока нет.</string>
+    <string name="events_summary">Эпизодов: %1$d</string>
+    <string name="event_format">%1$s · %2$d с · пик %3$d%%</string>
+
+    <string name="error_no_mic">Нет разрешения на микрофон.</string>
+    <string name="error_audio_init">Не удалось открыть микрофон. Закройте другие приложения, использующие запись, и попробуйте снова.</string>
+    <string name="error_model">Не удалось загрузить модель YAMNet. Переустановите приложение.</string>
+    <string name="error_gb_missing">Gadgetbridge не установлен — использую локальное уведомление.</string>
+
+    <string name="footer_privacy">Звук обрабатывается только на устройстве. Ничего не записывается и не отправляется в сеть.</string>
+
+    <string name="notification_channel_monitor">Мониторинг</string>
+    <string name="notification_channel_alert">Оповещения о храпе</string>
+    <string name="notification_monitor_title">AntiSnorr слушает</string>
+    <string name="notification_monitor_text">Детекция храпа работает в фоне.</string>
+    <string name="notification_stop">Стоп</string>
+    <string name="alert_title">Обнаружен храп</string>
+    <string name="alert_text">Пиковая вероятность %1$d%% — пора сменить положение.</string>
+    <string name="alert_test_title">Тест AntiSnorr</string>
+    <string name="alert_test_text">Если браслет вибрирует, всё настроено правильно.</string>
+</resources>
