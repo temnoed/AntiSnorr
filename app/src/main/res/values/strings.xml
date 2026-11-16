@@ -34,20 +34,20 @@
     <string name="setting_confirm_hits_hint">1 = instant, 2-4 = fewer false triggers. Default 1.</string>
     <string name="setting_repeat">Repeat while snoring</string>
     <string name="setting_repeat_value">%1$d s</string>
-    <string name="setting_pattern_summary">Fade-out rhythm: %1$d s — 3 series × 4 pulses of 1 s, gaps grow 1→3 s, 1 s between series. Then silence until the next repeat.</string>
+    <string name="setting_pattern_summary">Rhythm: 2 pulses of 0.5 s, 2 s apart (about %1$d s), then silence until the next repeat.</string>
     <string name="setting_mode">Vibration channel</string>
 
     <string name="mode_notification">Notification</string>
     <string name="mode_gb_notification">GB intent</string>
     <string name="mode_gb_call">GB fake call</string>
 
-    <string name="mode_hint_notification">AntiSnorr posts a local notification and Gadgetbridge forwards it to the band. No extra Gadgetbridge settings are required besides notification access.</string>
+    <string name="mode_hint_notification">AntiSnorr posts a local notification and a companion app forwards it to the band. Works with both Gadgetbridge and Zepp: add AntiSnorr to the allowed app list (in Gadgetbridge — notification access; in Zepp — Device → App notifications).</string>
     <string name="mode_hint_gb_notification">Sends a DEBUG_SEND_NOTIFICATION broadcast. In Gadgetbridge enable Settings → Developer settings → Intent API → Debug → Allow debug commands.</string>
     <string name="mode_hint_gb_call">Simulates an incoming call for a few seconds. Usually the strongest vibration. Requires the same \"Allow debug commands\" setting. Used for the fade-out rhythm (1 s pulses).</string>
 
     <string name="setup_step_1">1. Install Gadgetbridge, pair the band and make sure it stays connected.</string>
-    <string name="setup_step_2">2. In Gadgetbridge enable \"Allow debug commands\" (Settings → Developer settings → Intent API → Debug). Notification access is only needed for the Notification mode.</string>
-    <string name="setup_step_3">3. In Gadgetbridge open the band settings and enable notifications/vibration for AntiSnorr.</string>
+    <string name="setup_step_2">2. To use Gadgetbridge modes, enable \"Allow debug commands\" (Settings → Developer settings → Intent API → Debug). The Notification mode needs notification access in the companion app (Gadgetbridge or Zepp) instead.</string>
+    <string name="setup_step_3">3. In the companion app (Gadgetbridge or Zepp) enable notifications for AntiSnorr in the band\'s app-notification list.</string>
     <string name="setup_step_4">4. Grant microphone and notification permissions to AntiSnorr and start monitoring.</string>
     <string name="setup_step_5">5. Disable battery optimisation for AntiSnorr so Android does not kill the foreground service at night.</string>
 

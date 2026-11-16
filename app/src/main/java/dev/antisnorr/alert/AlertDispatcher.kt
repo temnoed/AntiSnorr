@@ -17,12 +17,12 @@ import kotlin.math.roundToInt
 enum class AlertReason { SNORE, TEST }
 
 /**
- * Runs the configured fade-out vibration pattern (see [VibrationPattern]).
+ * Runs the configured vibration pattern (see [VibrationPattern]).
  *
- * The actual buzz is produced by Gadgetbridge — AntiSnorr only schedules the
- * start/stop commands (fake call) or repeated notifications. Fake call is the
- * only channel that honours the 1 s pulse length, which is why it is the
- * default for the rhythm.
+ * The actual buzz is produced by the companion app — AntiSnorr only schedules
+ * the start/stop commands (fake call via Gadgetbridge) or repeated local
+ * notifications that Gadgetbridge or Zepp forward to the band.
+ * NOTIFICATION is the default: it works with both Gadgetbridge and Zepp.
  */
 class AlertDispatcher(private val context: Context) {
 
@@ -79,7 +79,7 @@ class AlertDispatcher(private val context: Context) {
         try {
             for (series in 0 until pattern.seriesCount) {
                 for (pulse in 0 until pattern.pulsesPerSeries) {
-                    startPulse(mode, title, text)
+                    startPulse(mode, title, pulseText(text, pulse))
                     delay(pattern.pulseMs)
                     endPulse(mode)
                     if (pulse < pattern.pulsesPerSeries - 1) {
@@ -94,6 +94,13 @@ class AlertDispatcher(private val context: Context) {
             endPulse(mode)
         }
     }
+
+    /**
+     * Companion apps may collapse visually identical notifications, so each
+     * pulse carries a distinguishable text ("… ·2", "… ·3").
+     */
+    private fun pulseText(base: String, pulse: Int): String =
+        if (pulse == 0) base else "$base ·${pulse + 1}"
 
     private fun startPulse(mode: AlertMode, title: String, text: String) {
         when (mode) {

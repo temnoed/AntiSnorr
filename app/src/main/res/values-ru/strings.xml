@@ -29,20 +29,20 @@
     <string name="setting_threshold_hint">Чем выше значение, тем меньше ложных срабатываний. Начните с 0.35.</string>
     <string name="setting_repeat">Повтор, пока храп продолжается</string>
     <string name="setting_repeat_value">%1$d с</string>
-    <string name="setting_pattern_summary">Ритм затухания: %1$d с — 3 серии × 4 импульса по 1 с, паузы между ними растут 1→3 с, между сериями 1 с. Затем тишина до следующего повтора.</string>
+    <string name="setting_pattern_summary">Ритм: 2 импульса по 0,5 с с паузой 2 с (около %1$d с), затем тишина до следующего повтора.</string>
     <string name="setting_mode">Канал вибрации</string>
 
     <string name="mode_notification">Уведомление</string>
     <string name="mode_gb_notification">GB intent</string>
     <string name="mode_gb_call">Фейк-звонок</string>
 
-    <string name="mode_hint_notification">AntiSnorr показывает локальное уведомление, Gadgetbridge пересылает его на браслет. Кроме доступа к уведомлениям в Gadgetbridge ничего настраивать не нужно.</string>
+    <string name="mode_hint_notification">AntiSnorr показывает локальное уведомление, а приложение-компаньон пересылает его на браслет. Работает и через Gadgetbridge, и через Zepp: включите AntiSnorr в списке уведомлений приложений (в Gadgetbridge — доступ к уведомлениям; в Zepp — Устройство → Уведомления приложений).</string>
     <string name="mode_hint_gb_notification">Отправляет broadcast DEBUG_SEND_NOTIFICATION. В Gadgetbridge включите: Настройки → Для разработчиков → Intent API (в русском переводе — «Интернет API») → Отладка → Разрешить отладочные команды.</string>
     <string name="mode_hint_gb_call">Имитирует входящий звонок на несколько секунд. Обычно самая сильная вибрация. Требует той же настройки «Разрешить отладочные команды». Используется для ритма затухания (импульсы по 1 с).</string>
 
     <string name="setup_step_1">1. Установите Gadgetbridge, спарьте браслет и убедитесь, что он остаётся подключённым.</string>
-    <string name="setup_step_2">2. В Gadgetbridge включите «Разрешить отладочные команды» (Настройки → Для разработчиков → Intent API → Отладка). Доступ к уведомлениям нужен только для режима «Уведомление».</string>
-    <string name="setup_step_3">3. В настройках браслета в Gadgetbridge включите уведомления и вибрацию для AntiSnorr.</string>
+    <string name="setup_step_2">2. Для режимов Gadgetbridge включите «Разрешить отладочные команды» (Настройки → Для разработчиков → Intent API → Отладка). Для режима «Уведомление» вместо этого нужен доступ к уведомлениям у приложения-компаньона (Gadgetbridge или Zepp).</string>
+    <string name="setup_step_3">3. В приложении-компаньоне (Gadgetbridge или Zepp) включите уведомления для AntiSnorr в списке приложений браслета.</string>
     <string name="setup_step_4">4. Выдайте AntiSnorr разрешения на микрофон и уведомления и запустите мониторинг.</string>
     <string name="setup_step_5">5. Отключите оптимизацию батареи для AntiSnorr, чтобы Android не убил foreground-сервис ночью.</string>
 

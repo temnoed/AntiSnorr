@@ -1,12 +1,12 @@
 package dev.antisnorr.core
 
 /**
- * Vibration rhythm: 3 short pulses of 0.5 s with 2 s gaps, then silence.
+ * Vibration rhythm: 2 short pulses of 0.5 s with a 2 s gap, then silence.
  * Repeats every [repeatMs] while snoring continues.
  */
 data class VibrationPattern(
     val pulseMs: Long = 500L,
-    val pulsesPerSeries: Int = 3,
+    val pulsesPerSeries: Int = 2,
     val seriesCount: Int = 1,
     val firstGapMs: Long = 2_000L,
     val lastGapMs: Long = 2_000L,

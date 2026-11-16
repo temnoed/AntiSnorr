@@ -24,7 +24,7 @@ data class DetectionConfig(
     val confirmHits: Int = 1,
     val releaseMs: Long = 4_000L,
     val repeatMs: Long = 30_000L,
-    val alertMode: AlertMode = AlertMode.GB_INTENT_CALL,
+    val alertMode: AlertMode = AlertMode.NOTIFICATION,
     val callDurationMs: Long = 6_000L,
     val pattern: VibrationPattern = VibrationPattern(),
     val gain: Float = 3.0f,
@@ -66,9 +66,9 @@ object Settings {
         repeatMs = prefs.getLong(KEY_REPEAT_MS, 30_000L),
         alertMode = runCatching {
             AlertMode.valueOf(
-                prefs.getString(KEY_ALERT_MODE, null) ?: AlertMode.GB_INTENT_CALL.name,
+                prefs.getString(KEY_ALERT_MODE, null) ?: AlertMode.NOTIFICATION.name,
             )
-        }.getOrDefault(AlertMode.GB_INTENT_CALL),
+        }.getOrDefault(AlertMode.NOTIFICATION),
         callDurationMs = prefs.getLong(KEY_CALL_DURATION_MS, 6_000L),
         pattern = VibrationPattern(),
         gain = prefs.getFloat(KEY_GAIN, 3.0f),
