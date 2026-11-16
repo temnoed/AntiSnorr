@@ -1,5 +1,0 @@
-11-17 00:45:18.243  6008  8568 I adb.exe : transport.cpp:1116 resetting transport 0x16a4458 0S62402I22100A54
-11-17 00:45:18.246  6008  8660 E adb.exe : adb_usb_connection.cpp:68 AdbUsbConnection: 1 - write terminated: No error
-11-17 00:45:18.247  6008  8660 I adb.exe : transport.cpp:1222 0S62402I22100A54: connection terminated: write failed
-11-17 00:45:18.246  6008  4348 E adb.exe : adb_usb_connection.cpp:52 AdbUsbConnection: terminated (data): No error
-11-17 00:54:14.834  6008  8568 I adb.exe : adb.cpp:1288 adb server killed by remote request

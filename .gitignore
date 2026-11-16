@@ -18,3 +18,6 @@ app/build/
 AntiSnorr night log.txt
 audio_log_alignment.png
 antisnorr_night.log
+
+# adb server trace logs (scratch)
+adb_*.log

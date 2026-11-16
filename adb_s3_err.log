@@ -1,3 +1,0 @@
-11-17 00:57:10.151  2156  6008 I adb.exe : transport.cpp:1116 resetting transport 0x16da860 0S62402I22100A54
-11-17 00:57:10.153  2156 10788 E adb.exe : adb_usb_connection.cpp:68 AdbUsbConnection: 1 - write terminated: No error
-11-17 00:57:10.153  2156  5160 I adb.exe : transport.cpp:1222 0S62402I22100A54: connection terminated: read failed
